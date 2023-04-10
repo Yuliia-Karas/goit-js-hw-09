@@ -5,11 +5,9 @@ const form = document.querySelector('.form');
 form.addEventListener('submit', function (event) {
   event.preventDefault();
 
-  const { delay, step, amount } = form.elements;
-
-  // const delay = parseInt(form.elements.delay.value);
-  // const step = parseInt(form.elements.step.value);
-  // const amount = parseInt(form.elements.amount.value);
+  const delay = parseInt(form.elements.delay.value);
+  const step = parseInt(form.elements.step.value);
+  const amount = parseInt(form.elements.amount.value);
 
   for (let i = 1; i <= amount; i++) {
     createPromise(i, delay + (i - 1) * step)
