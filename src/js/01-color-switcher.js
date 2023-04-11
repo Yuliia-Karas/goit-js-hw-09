@@ -21,7 +21,6 @@ startBtn.addEventListener('click', () => {
 
 stopBtn.addEventListener('click', () => {
   clearInterval(timerId);
-  body.style.backgroundColor = getRandomHexColor();
   startBtn.disabled = false;
   stopBtn.disabled = true;
 });
